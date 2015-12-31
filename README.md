@@ -3,7 +3,7 @@
     There are my QML kit. glhf
     
 ## Component
-  *EButton - A button
-  *EpicSlider - A  pic viewer
+  - EButton - A button
+  - EpicSlider - A  pic viewer
 
-  ![screenshot](https://github.com/test-preview.png)
+  ![screenshot](https://raw.githubusercontent.com/radio-ho0/qml_kit/master/preview.png)
