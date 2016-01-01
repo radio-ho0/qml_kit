@@ -43,9 +43,30 @@ Rectangle {
 		}
 	}
 
+	function creatObj( file ){
+		var  component = Qt.createComponent( ( file ) );
+		if (component.status === Component.Ready){
+			var obj =  component.createObject(root, {"x": 0, "y": 0, });
+			if (obj === null) {
+				console.log("Error creating object");
+			}
+		} // createComponent
+	}
 
+	EButton  {
+		id             : bt_weather
+		width          : 48
+		height         : 48
+		anchors.left   : parent.left
+		anchors.bottom : parent.bottom
+		source         : "pics/weather/weather-clear.png"
 
+		onClicked : {
+			creatObj("weather.qml");
+		}
+	}
 
 
 }
+
 
