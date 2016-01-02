@@ -9,52 +9,60 @@ ApplicationWindow  {
     width : 800
     height  : 600
     color : "beige"
-
+    
     toolBar:
-        Rectangle {
-            id : header
-            width : parent.width
-            height :  60
-            color :  "#78ba00"
-
-           EButton {
-                id : bt_back
-                width : opacity ? 60 : 0
-                height : parent.height
-                anchors.left:  parent.left
-                anchors.leftMargin: 15
-                anchors.verticalCenter:  parent.verticalCenter
-                radius :  8
-                opacity:  stack_view.depth > 1 ? 1 : 0
-                text : qsTr("<back")
-            //    antialiasing: true
-                Behavior on opacity {
-                    NumberAnimation{}
+    Rectangle {
+        id : header
+        width : parent.width
+        height :  60
+        color :  "#78ba00"
+        
+        EButton {
+            id : bt_back
+            width : opacity ? 60 : 0
+            height : parent.height
+            anchors.left:  parent.left
+            anchors.leftMargin: 15
+            anchors.verticalCenter:  parent.verticalCenter
+            radius :  8
+            opacity:  stack_view.depth > 1 ? 1 : 0
+            text : qsTr("<back")
+            antialiasing: true
+            Behavior on opacity {
+                NumberAnimation{}
+            }
+            
+            onClicked:  {
+                stack_view.pop();
+            }
+        }
+        Text {
+            id : title
+            x : bt_back.x + bt_back.width + 40
+            anchors.verticalCenter:  parent.verticalCenter
+            color : "white"
+            font.pointSize:  42
+            text : "ele1000 QML_kit"
+            
+            Behavior on x {
+                NumberAnimation{
+                    easing.type: Easing.OutCubic
                 }
-
-                onClicked:  {
-                    stack_view.pop();
-                }
-           }
-           Text {
-               id : title
-               x : bt_back.x + bt_back.width + 40
-               anchors.verticalCenter:  parent.verticalCenter
-               color : "white"
-               font.pointSize:  42
-               text : "ele1000 QML_kit"
-
-               Behavior on x {
-                   NumberAnimation{
-                       easing.type: Easing.OutCubic
-                   }
-               }
-           }
-
-        } // header
-
+            }
+        }
+        
+    } // header
+    
     ListModel {
         id: page_model
+        ListElement {
+            title: "test ELabel"
+            page: "test/test_elabel.qml"
+        }
+        ListElement {
+            title: "test EButton"
+            page: "test/test_ebutton.qml"
+        }
         ListElement {
             title: "Pic Viewer"
             page: "test/pic_viewer.qml"
@@ -63,15 +71,15 @@ ApplicationWindow  {
             title: "Weather 1"
             page: "test/weather.qml"
         }
-
+        
     }
-
-
+    
+    
     StackView {
         id : stack_view
         anchors.fill:  parent
         focus:  true
-
+        
         initialItem:  Item {
             width : parent.width
             height : parent.height
@@ -83,6 +91,7 @@ ApplicationWindow  {
                     width : parent.width
                     height : 70
                     color: "#424246"
+                    text_color : "#E4432C"
                     source : ""
                     onClicked:  {
                         stack_view.push(Qt.resolvedUrl( page ));

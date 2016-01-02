@@ -1,8 +1,9 @@
-import QtQuick 2.4
+import QtQuick 2.0
 
 Rectangle {
     id                    : root
     property alias text   : label.text 
+    property alias text_color : label.color
     property alias font   : label.font.family
     property alias source : img.source
     property string source_press 
@@ -39,16 +40,9 @@ Rectangle {
             parent.state = "state_press"
         }
     }
-
-    Text {
-        id                  : label
-        anchors.centerIn    : parent
-        text                : ""
-        verticalAlignment   : Text.AlignVCenter
-        horizontalAlignment : Text.AlignHCenter
-        font.family         : "WenQuanYi Zen Hei"
-        font.pointSize      : 24
-        color               : "#feffff"
+    ELabel {
+	    id : label
+	    anchors.fill : parent
     }
 
     states: [
