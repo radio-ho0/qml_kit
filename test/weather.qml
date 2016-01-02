@@ -1,5 +1,6 @@
 import QtQuick 2.0
-import "./js/jsonpath.js" as JSONPath
+import "../js/jsonpath.js" as JSONPath
+import "../widget"
 
 // this is a Weather Widget
 
@@ -8,6 +9,15 @@ Rectangle {
     width  : 800
     height : 600
     color  : "beige"
+    
+    signal jsonOK();
+    
+    onJsonOK : {
+		parseJSONString( title, got_this_string , query_city_name);
+                parseJSONString( day1_info, got_this_string , day1_weather);
+                parseJSONString( day2_info, got_this_string , day2_weather);
+                parseJSONString( day3_info, got_this_string , day3_weather);
+    }
 
     property string json_src        : 'http://api.openweathermap.org/data/2.5/forecast?q=Zhuhai,cn&mode=json&appid=2de143494c0b295cca9337e1e96b00e0'
     property string query_city_name : "$.city.name"
@@ -26,6 +36,7 @@ Rectangle {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 got_this_string = xhr.responseText;
+		root.jsonOK();
             }
         }
         xhr.send();
@@ -65,23 +76,6 @@ Rectangle {
         }
 
     }
-
-    Timer{
-        id       : update_weather
-        interval : 1500
-        running  : true
-        repeat   : false
-        onTriggered:  {
-            onTriggered:  {
-                parseJSONString( title, got_this_string , query_city_name);
-                parseJSONString( day1_info, got_this_string , day1_weather);
-                parseJSONString( day2_info, got_this_string , day2_weather);
-                parseJSONString( day3_info, got_this_string , day3_weather);
-            }
-        }
-    }
-
-
 
     Column{
         id     : r_all
@@ -158,16 +152,6 @@ Rectangle {
             }
         } // day3
     }
-        EButton {
-                id             : bt_close
-                color          : "darkred"
-                text           : qsTr("Close")
-                anchors.right  : parent.right
-                anchors.bottom : parent.bottom
 
-                onClicked : {
-                        root.destroy();
-                }
-        }
 
 }
