@@ -5,8 +5,8 @@ import "../widget"
 
 Rectangle {
 	id     : root
-	width  : 800
-	height : 600
+	width  : parent.width
+	height : parent.height
 	color  : "beige"
 
 	ObjectModel {

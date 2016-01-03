@@ -71,6 +71,10 @@ ApplicationWindow  {
             title: "Weather 1"
             page: "test/weather.qml"
         }
+        ListElement {
+            title: "Weather 3"
+            page: "test/weather3.qml"
+        }
         
     }
     

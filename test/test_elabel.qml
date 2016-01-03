@@ -3,8 +3,8 @@ import "../widget"
 
 Rectangle {
 	id : root
-	width : 480
-	height  : 360
+	width  : parent.width
+	height : parent.height
 	color : "beige"
 
 	ELabel {
@@ -16,6 +16,7 @@ Rectangle {
 		id  : i2
 		text : "world"
 		x : 100
+		font.family : "DejaVu Serif"
         color : "orange"
 	}
 }
