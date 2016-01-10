@@ -32,7 +32,7 @@ Rectangle {
                 id :  view
                 anchors {
                     fill: parent;
-//                    bottomMargin: 36
+                    //                    bottomMargin: 36
                 }
                 clip : true
                 model                   : model
@@ -79,20 +79,41 @@ Rectangle {
                     clip   : true
 
                     Rectangle {
-			id : circle
-			anchors.fill : parent
-			anchors.margins : 5
-			color  :    view.currentIndex == index ? "greenyellow" : "green"
-			radius : width / 2
+                        id : circle
+                        anchors.fill : parent
+                        anchors.margins : 5
+                        color  :    view.currentIndex == index ? "greenyellow" : "green"
+                        radius : width / 2
                     }
                     MouseArea {
                         anchors.fill : parent
-                        onClicked    : view.currentIndex = index
+                        onClicked    : {
+                            view.currentIndex = index;
+                            var n_page = view.model.count;
+                            if( n_page > 1){
+                                if( index == 0 ){
+                                    show_obj( next_page );
+                                    hide_obj( prev_page );
+                                }else if(index == n_page -1 ){
+                                    show_obj( prev_page );
+                                    hide_obj( next_page );
+                                }
+                            }
+                        }
+
                     }
+
                 }
             }
         }
     }     // nav_bar
+
+    function show_obj( obj ){
+        obj.visible = true;
+    }
+    function hide_obj( obj ){
+        obj.visible = false;
+    }
 
     EButton{
         id     : next_page
@@ -102,8 +123,8 @@ Rectangle {
         height : 86
         anchors.verticalCenter: parent.verticalCenter
         source : ""
-	text : "N"
-	color  : "olive"
+        text : "N"
+        color  : "olive"
         onClicked: {
             view.incrementCurrentIndex();
         }
@@ -116,8 +137,8 @@ Rectangle {
         height : 86
         anchors.verticalCenter: parent.verticalCenter
         source : ""
-	text : "P"
-	color  : "palegreen"
+        text : "P"
+        color  : "palegreen"
         onClicked: {
             view.decrementCurrentIndex();
         }

@@ -1,33 +1,34 @@
-import QtQuick 2.5
+import QtQuick 2.0
 import QtQuick.Controls 1.2
 import QtQuick.Window 2.2
 import "./widget"
+import "./js/kit.js" as Kit
 
 ApplicationWindow  {
-    id : root
-    visible: true
-    width : 800
+    id      : root
+    visible : true
+    width   : 800
     height  : 600
-    color : "beige"
+    color   : Kit.color_bg
     
     toolBar:
     Rectangle {
-        id : header
-        width : parent.width
-        height :  60
-        color :  "#78ba00"
+        id     : header
+        width  : parent.width
+        height : 60
+        color  : Kit.color_nav_bar
         
         EButton {
-            id : bt_back
-            width : opacity ? 60 : 0
-            height : parent.height
-            anchors.left:  parent.left
-            anchors.leftMargin: 15
-            anchors.verticalCenter:  parent.verticalCenter
-            radius :  8
-            opacity:  stack_view.depth > 1 ? 1 : 0
-            text : qsTr("<back")
-            antialiasing: true
+            id                     : bt_back
+            width                  : opacity ? 60             : 0
+            height                 : parent.height
+            anchors.left           : parent.left
+            anchors.leftMargin     : 15
+            anchors.verticalCenter : parent.verticalCenter
+            radius                 : 8
+            opacity                : stack_view.depth > 1 ? 1 : 0
+            text                   : qsTr("<back")
+            antialiasing           : true
             Behavior on opacity {
                 NumberAnimation{}
             }
@@ -37,12 +38,12 @@ ApplicationWindow  {
             }
         }
         Text {
-            id : title
-            x : bt_back.x + bt_back.width + 40
-            anchors.verticalCenter:  parent.verticalCenter
-            color : "white"
-            font.pointSize:  42
-            text : "ele1000 QML_kit"
+            id                     : title
+            x                      : bt_back.x + bt_back.width + 40
+            anchors.verticalCenter : parent.verticalCenter
+            color                  : "white"
+            font.pointSize         : 42
+            text                   : "ele1000 QML_kit"
             
             Behavior on x {
                 NumberAnimation{
@@ -56,30 +57,30 @@ ApplicationWindow  {
     ListModel {
         id: page_model
         ListElement {
-            title: "test ELabel"
-            page: "test/test_elabel.qml"
+            title : "test ELabel"
+            page  : "test/test_elabel.qml"
         }
         ListElement {
-            title: "test EButton"
-            page: "test/test_ebutton.qml"
-        }
-
-        ListElement {
-            title: "珠海天气"
-            page: "test/zh_weather.qml"
+            title : "test EButton"
+            page  : "test/test_ebutton.qml"
         }
 
         ListElement {
-            title: "Pic Viewer"
-            page: "test/pic_viewer.qml"
+            title : "珠海天气"
+            page  : "test/zh_weather.qml"
+        }
+
+        ListElement {
+            title : "Pic Viewer"
+            page  : "test/pic_viewer.qml"
         }
         ListElement {
-            title: "Weather 1"
-            page: "test/weather.qml"
+            title : "test JSON PATH"
+            page  : "test/json_path.qml"
         }
         ListElement {
-            title: "Weather 3"
-            page: "test/weather3.qml"
+            title : "Weather 3"
+            page  : "test/weather3.qml"
         }
         
     }

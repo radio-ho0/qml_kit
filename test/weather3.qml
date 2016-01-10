@@ -1,18 +1,18 @@
 import QtQuick 2.0
 import "../widget/"
+import "../js/kit.js" as Kit
 
 Rectangle {
-    id     : root
+    id                              : root
 
-    width  : parent.width
-    height : parent.height
-    color  : "beige"
-    property string src : "http://api.openweathermap.org/data/2.5/forecast?q=Zhuhai,cn&mode=json&appid=2de143494c0b295cca9337e1e96b00e0"
-    property string res_dir : "../pics/"
-    signal jsonOK();
+    width                           : parent.width
+    height                          : parent.height
+    color                           : "beige"
 
+    property string res_dir         : "../pics/"
     property string got_this_string : ""
 
+    signal jsonOK();
     onJsonOK : {
 
         my_weather_model.clear();
@@ -27,9 +27,9 @@ Rectangle {
                     "m_main"        : weather_obj.list[ i ].weather[0].main,
                     "m_date"        : weather_obj.list[ i ].dt_txt,
                     "m_description" : weather_obj.list[ i ].weather[0].description,
-		    "m_icon"	    : weather_obj.list[ i ].weather[0].icon,
-		    "m_humidity"    : weather_obj.list[ i ].main.humidity,
-		    "m_temperature" : weather_obj.list[ i ].main.temp
+                    "m_icon"        : weather_obj.list[ i ].weather[0].icon,
+                    "m_humidity"    : weather_obj.list[ i ].main.humidity,
+                    "m_temperature" : weather_obj.list[ i ].main.temp
                 }
             );
 
@@ -38,21 +38,21 @@ Rectangle {
 
     Component.onCompleted : {
         print("aHa!");
-        got_weather( src );
+        got_weather( Kit.zh_weather_url );
 
         my_weather_model.append(
             {
                 "m_main"        : "Sunny",
                 "m_date"        : "2015-11-11",
                 "m_description" : " very Good!",
-                "m_icon" 	: "01n",
-		"m_humidity" 	: 60, 
-		"m_temperature"	: 301
+                "m_icon"        : "01n",
+                "m_humidity"    : 60,
+                "m_temperature" : 301
             }
         );
-	var date = new Date();
-	var month = date.getUTCMonth() + 1 ;
-	var year = date.getUTCFullYear();
+	var date   = new Date();
+	var month  = date.getUTCMonth() + 1 ;
+	var year   = date.getUTCFullYear();
 	title.text = year + "-" + month + "-" + date.getUTCDate();
     }
 
@@ -71,22 +71,22 @@ Rectangle {
     }
 
     ListView {
-        id                 : viewer
-        width              : parent.width
-        height             : parent.height
+        id          : viewer
+        width       : parent.width
+        height      : parent.height
         anchors {
-            top            : title.bottom
-	    topMargin	   : 20
-            left           : parent.left
+            top     : title.bottom
+	    topMargin   : 20
+            left    : parent.left
         }
-        spacing            : 10
-        model              : my_weather_model
+        spacing     : 10
+        model       : my_weather_model
 
-	delegate           : Weather_delegate{
-		source :  res_dir + "weather/" + translate_icon( m_icon );
-		date : m_date
+	delegate        : Weather_delegate{
+		source      : res_dir + "weather/" + translate_icon( m_icon );
+		date        : m_date
 		description : m_description
-		humidity : m_humidity + " %"
+		humidity    : m_humidity + " %"
 		temperature : kelvin_to_celsius( m_temperature ) + "ºC"
 	}
 

@@ -41,22 +41,22 @@ Rectangle {
         }
     }
     ELabel {
-	    id : label
-	    anchors.fill : parent
+        id : label
+        anchors.fill : parent
     }
 
     states: [
-          State {
-              name: "state_pressed"; 
-              PropertyChanges { target: img; source: source_press ? source_press : source }
-          },
-          State {
-              name: "state_normal"; 
-              PropertyChanges { target: img; source: source }
-          },
-          State {
-              name: "state_release"; 
-              PropertyChanges { target: img; source: source_relea ? source_relea : source }
-          }
-      ]
+        State {
+            name: "state_pressed"; 
+            PropertyChanges { target: img; source: source_press ? source_press : source }
+        },
+        State {
+            name: "state_normal"; 
+            PropertyChanges { target: img; source: source }
+        },
+        State {
+            name: "state_release"; 
+            PropertyChanges { target: img; source: source_relea ? source_relea : source }
+        }
+    ]
 }

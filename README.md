@@ -6,6 +6,7 @@
   - ELabel - simple text
   - EButton - A button
   - EpicSlider - A  pic viewer
+  - Weatherdelegate - a simple  weather delegate widget
 
   ![screenshot](https://raw.githubusercontent.com/radio-ho0/qml_kit/master/preview.png)
   
