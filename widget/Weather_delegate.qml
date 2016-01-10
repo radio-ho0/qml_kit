@@ -2,13 +2,15 @@ import QtQuick 2.0
 
 Rectangle {
     id : root
-    width : 350
+    width : 550
     height :50
     color : "transparent"
 
     property alias source  : weather_icon.source
     property alias date    : info_date.text
     property alias description : info_description.text
+    property alias humidity    :info_humidity.text
+    property alias temperature : info_temperature.text
 
     Image {
         id : weather_icon
@@ -37,6 +39,28 @@ Rectangle {
             leftMargin:  10
         }
     }
+    Text {
+        id : info_temperature
+        text: "23"
+        font.pointSize: 22
+        anchors.verticalCenter: parent.verticalCenter
+        anchors{
+            left : info_description.right
+            leftMargin:  10
+        }
+    }
+    Text {
+        id : info_humidity
+        text: "60"
+        font.pointSize: 22
+        anchors.verticalCenter: parent.verticalCenter
+        anchors{
+            left : info_temperature.right
+            leftMargin:  10
+        }
+    }
+
+
 }
 
 

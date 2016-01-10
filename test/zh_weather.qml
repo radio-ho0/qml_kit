@@ -1,5 +1,3 @@
-
-
 import QtQuick 2.0
 import "../widget/"
 
@@ -29,7 +27,9 @@ Rectangle {
                     "m_main"        : weather_obj.list[ i ].weather[0].main,
                     "m_date"        : weather_obj.list[ i ].dt_txt,
                     "m_description" : weather_obj.list[ i ].weather[0].description,
-		    "m_icon"	    : weather_obj.list[ i ].weather[0].icon
+		    "m_icon"	    : weather_obj.list[ i ].weather[0].icon,
+		    "m_humidity"    : weather_obj.list[ i ].main.humidity,
+		    "m_temperature" : weather_obj.list[ i ].main.temp
                 }
             );
         }
@@ -44,7 +44,9 @@ Rectangle {
                 "m_main"        : "Sunny",
                 "m_date"        : "2015-11-11",
                 "m_description" : " very Good!",
-                "m_icon" 	: "01n"
+                "m_icon" 	: "01n",
+		"m_humidity" 	: 60, 
+		"m_temperature"	: 301
             }
         );
 	var date = new Date();
@@ -83,8 +85,16 @@ Rectangle {
 		source :  res_dir + "weather/" + translate_icon( m_icon );
 		date : m_date
 		description : translate_description( m_icon )
+		humidity : m_humidity + " %"
+		temperature : kelvin_to_celsius( m_temperature ) + "ºC"
 	}
 
+    }
+
+    function  kelvin_to_celsius( foo ){
+	    var temp_c = foo - 273.15;
+	    
+	    return temp_c.toFixed(2);
     }
 
     function translate_icon( which ){
