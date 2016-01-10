@@ -63,6 +63,12 @@ ApplicationWindow  {
             title: "test EButton"
             page: "test/test_ebutton.qml"
         }
+
+        ListElement {
+            title: "珠海天气"
+            page: "test/zh_weather.qml"
+        }
+
         ListElement {
             title: "Pic Viewer"
             page: "test/pic_viewer.qml"
