@@ -20,7 +20,7 @@ ApplicationWindow  {
         
         EButton {
             id                     : bt_back
-            width                  : opacity ? 60             : 0
+            width                  : opacity ? 60 : 0
             height                 : parent.height
             anchors.left           : parent.left
             anchors.leftMargin     : 15
@@ -81,6 +81,10 @@ ApplicationWindow  {
         ListElement {
             title : "Weather 3"
             page  : "test/weather3.qml"
+        }
+        ListElement {
+            title : "font list"
+            page  : "test/listfont.qml"
         }
         
     }
