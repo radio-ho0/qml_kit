@@ -86,6 +86,11 @@ ApplicationWindow  {
             title : "font list"
             page  : "test/listfont.qml"
         }
+
+        ListElement {
+            title : "path_tester - js"
+            page  : "test/path_tester.qml"
+        }
         
     }
     

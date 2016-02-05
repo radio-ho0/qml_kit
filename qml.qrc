@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>widget/EButton.qml</file>
+        <file>widget/ELabel.qml</file>
+        <file>widget/EpicSlider.qml</file>
+        <file>widget/JSONListModel.qml</file>
+        <file>widget/ScrollBar.qml</file>
+        <file>widget/Weather_delegate.qml</file>
+        <file>test/json_path.qml</file>
+        <file>test/listfont.qml</file>
+        <file>test/pic_viewer.qml</file>
+        <file>test/test_ebutton.qml</file>
+        <file>test/test_elabel.qml</file>
+        <file>test/weather3.qml</file>
+        <file>test/zh_weather.qml</file>
+        <file>pics/1.png</file>
+        <file>pics/2.png</file>
+        <file>pics/3.png</file>
+        <file>pics/bt1.png</file>
+        <file>pics/bt2.png</file>
+        <file>pics/scrollbar.png</file>
+        <file>js/kit.js</file>
+        <file>js/jsonpath.js</file>
+        <file>test/path_tester.qml</file>
+        <file>widget/EScrollText.qml</file>
+    </qresource>
+</RCC>
