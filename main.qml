@@ -91,6 +91,11 @@ ApplicationWindow  {
             title : "path_tester - js"
             page  : "test/path_tester.qml"
         }
+
+        ListElement {
+            title : "path_tester - cpp"
+            page  : "test/cpp_path.qml"
+        }
         
     }
     

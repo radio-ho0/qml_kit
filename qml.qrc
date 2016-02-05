@@ -24,5 +24,6 @@
         <file>js/jsonpath.js</file>
         <file>test/path_tester.qml</file>
         <file>widget/EScrollText.qml</file>
+        <file>test/cpp_path.qml</file>
     </qresource>
 </RCC>
