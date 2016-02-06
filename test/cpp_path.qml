@@ -80,7 +80,7 @@ Rectangle {
                 id  : go
                 width : parent.width - txt_path.width - 5
                 height :  parent.height
-                color :  Kit.color_nav_bar
+                color :  "orangered"
                 text_color : "white"
                 radius:  8
                 text : "go!"
@@ -137,7 +137,7 @@ Rectangle {
 
         if( query !== "" ){
             var result = my_json_path.setJSON( txt, query.toString() );
-            txt_output.text = result.toString();
+            txt_output.text = result;
         }
     }
     

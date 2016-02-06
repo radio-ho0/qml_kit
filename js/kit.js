@@ -5,7 +5,7 @@
  * @version 2016/01/10
  */
 
-var zh_weather_url = "http://api.openweathermap.org/data/2.5/forecast?q=Zhuhai,cn&mode=json&appid=2de143494c0b295cca9337e1e96b00e0";
+var zh_weather_url = "http://api.openweathermap.org/data/2.5/forecast?q=Zhuhai,cn&mode=json&appid=5819a34c58f8f07bc282820ca08948f1";
 
 var color_tomato      = "tomato"
 var color_temperature = color_tomato

@@ -25,5 +25,36 @@
         <file>test/path_tester.qml</file>
         <file>widget/EScrollText.qml</file>
         <file>test/cpp_path.qml</file>
+        <file>pics/weather/04d.png</file>
+        <file>pics/weather/04n.png</file>
+        <file>pics/weather/10d.png</file>
+        <file>pics/weather/10n.png</file>
+        <file>pics/weather/11d.png</file>
+        <file>pics/weather/13d.png</file>
+        <file>pics/weather/50d.png</file>
+        <file>pics/weather/weather-clear-night.png</file>
+        <file>pics/weather/weather-clear.png</file>
+        <file>pics/weather/weather-clouds-night.png</file>
+        <file>pics/weather/weather-clouds.png</file>
+        <file>pics/weather/weather-few-clouds-night.png</file>
+        <file>pics/weather/weather-few-clouds.png</file>
+        <file>pics/weather/weather-freezing-rain.png</file>
+        <file>pics/weather/weather-hail.png</file>
+        <file>pics/weather/weather-many-clouds.png</file>
+        <file>pics/weather/weather-mist.png</file>
+        <file>pics/weather/weather-showers-day.png</file>
+        <file>pics/weather/weather-showers-night.png</file>
+        <file>pics/weather/weather-showers-scattered-day.png</file>
+        <file>pics/weather/weather-showers-scattered-night.png</file>
+        <file>pics/weather/weather-showers-scattered.png</file>
+        <file>pics/weather/weather-showers.png</file>
+        <file>pics/weather/weather-snow-rain.png</file>
+        <file>pics/weather/weather-snow-scattered-day.png</file>
+        <file>pics/weather/weather-snow-scattered-night.png</file>
+        <file>pics/weather/weather-snow-scattered.png</file>
+        <file>pics/weather/weather-snow.png</file>
+        <file>pics/weather/weather-storm-day.png</file>
+        <file>pics/weather/weather-storm-night.png</file>
+        <file>pics/weather/weather-storm.png</file>
     </qresource>
 </RCC>

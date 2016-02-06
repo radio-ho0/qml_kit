@@ -109,6 +109,7 @@ ApplicationWindow  {
             width : parent.width
             height : parent.height
             ListView {
+                id :  menu_list
                 model : page_model
                 anchors.fill : parent
                 delegate:  EButton {
@@ -122,8 +123,21 @@ ApplicationWindow  {
                         stack_view.push(Qt.resolvedUrl( page ));
                     }
                 }
+            }// menu_list
+
+            ScrollBar {
+                id : stack_bar
+                width : 8
+                scrollArea: menu_list
+
+                anchors {
+                    right  : menu_list.right
+                    top    : menu_list.top
+                    bottom : menu_list.bottom
+                }
             }
         }
-    }
+    } // stack_view
+
 }
 
