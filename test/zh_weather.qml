@@ -87,8 +87,20 @@ Rectangle {
             description : translate_description( m_icon )
             humidity    : m_humidity + " %"
             temperature : kelvin_to_celsius( m_temperature ) + "ºC"
-	}
+        }
 
+    }
+
+    ScrollBar {
+        id         : font_list_bar
+        width      : 8
+        scrollArea : viewer
+
+        anchors {
+            right  : viewer.right
+            top    : viewer.top
+            bottom : viewer.bottom
+        }
     }
 
     function  kelvin_to_celsius( foo ){

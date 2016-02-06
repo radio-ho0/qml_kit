@@ -76,20 +76,31 @@ Rectangle {
         height      : parent.height
         anchors {
             top     : title.bottom
-	    topMargin   : 20
+            topMargin   : 20
             left    : parent.left
         }
         spacing     : 10
         model       : my_weather_model
 
-	delegate        : Weather_delegate{
-		source      : res_dir + "weather/" + translate_icon( m_icon );
-		date        : m_date
-		description : m_description
-		humidity    : m_humidity + " %"
-		temperature : kelvin_to_celsius( m_temperature ) + "ºC"
-	}
+        delegate        : Weather_delegate{
+            source      : res_dir + "weather/" + translate_icon( m_icon );
+            date        : m_date
+            description : m_description
+            humidity    : m_humidity + " %"
+            temperature : kelvin_to_celsius( m_temperature ) + "ºC"
+        }
 
+    }
+    ScrollBar {
+        id         : font_list_bar
+        width      : 8
+        scrollArea : viewer
+
+        anchors {
+            right  : viewer.right
+            top    : viewer.top
+            bottom : viewer.bottom
+        }
     }
 
     function  kelvin_to_celsius( foo ){
