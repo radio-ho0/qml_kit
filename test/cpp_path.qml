@@ -133,15 +133,11 @@ Rectangle {
     function parseText(){
         print("\x1b[32m go! \x1b[0m");
         var txt =  txt_source.text ;
-        var obj_json = JSON.parse(txt);
         var query = txt_path.text
 
-        print("  " + obj_json + " ===   " + query + " ")
         if( query !== "" ){
-            var result = my_json_path.setJSON( obj_json.toString(), query.toString() );
-            print("result::  " + result);
-            txt_output.text = result;
-
+            var result = my_json_path.setJSON( txt, query.toString() );
+            txt_output.text = result.toString();
         }
     }
     
