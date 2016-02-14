@@ -1,12 +1,15 @@
-# qml_kit
+# qml_kit  :stars:
 
-    There are my QML kit. glhf
+    There are my QML kit. glhf :relaxed:
     
 ## Component
-  - ELabel - simple text
   - EButton - A button
+  - ELabel - simple text
+  - EScrollText - a text area with scrollbar
   - EpicSlider - A  pic viewer
-  - Weatherdelegate - a simple  weather delegate widget
+  - EJSONListModel - json list model
+  - SCrollBar - scroll bar
+  - Weatherdelegate - a simple  weather delegate widget :blush:
 
   ![screenshot](https://raw.githubusercontent.com/radio-ho0/qml_kit/master/preview.png)
   
