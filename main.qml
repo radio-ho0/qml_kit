@@ -51,6 +51,17 @@ ApplicationWindow  {
                 }
             }
         }
+        EcurrTime {
+            id         : curr_time
+            timeout    : 5000
+            color_time : "white"
+            color_tip  : "gray"
+
+            anchors {
+                top   : parent.top
+                right : parent.right
+            }
+        }
         
     } // header
     
