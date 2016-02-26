@@ -50,5 +50,3 @@ var font_default      = "WenQuanYi Zen Hei"
         }
         return str.join("");
     }
-    
-    

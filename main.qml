@@ -10,6 +10,24 @@ ApplicationWindow  {
     width   : 800
     height  : 600
     color   : Kit.color_bg
+
+    Component.onCompleted : {
+        page_model.clear();
+ 
+        page_model.append({ title : "test Elabel",       page : "test/test_elabel.qml"});
+        page_model.append({ title : "test EButton",      page : "test/test_ebutton.qml"});
+        page_model.append({ title : "珠海天气",          page : "test/zh_weather.qml"});
+        page_model.append({ title : "Pic Viewer",        page : "test/pic_viewer.qml"});
+        page_model.append({ title : "JSON Path",         page : "test/json_path.qml"});
+        page_model.append({ title : "weather 3",         page : "test/weather3.qml"});
+        page_model.append({ title : "font list",         page : "test/listfont.qml"});
+        page_model.append({ title : "path_tester - js",  page : "test/path_tester.qml"});
+        page_model.append({ title : "path tester - cpp", page : "test/cpp_path.qml"});
+        page_model.append({ title : "EGallery",          page : "test/test_gallery.qml"});
+
+    }
+
+
     
     toolBar:
     Rectangle {
@@ -62,55 +80,14 @@ ApplicationWindow  {
                 right : parent.right
             }
         }
-        
+
     } // header
     
     ListModel {
-        id: page_model
-        ListElement {
-            title : "test ELabel"
-            page  : "test/test_elabel.qml"
-        }
-        ListElement {
-            title : "test EButton"
-            page  : "test/test_ebutton.qml"
-        }
-
-        ListElement {
-            title : "珠海天气"
-            page  : "test/zh_weather.qml"
-        }
-
-        ListElement {
-            title : "Pic Viewer"
-            page  : "test/pic_viewer.qml"
-        }
-        ListElement {
-            title : "test JSON PATH"
-            page  : "test/json_path.qml"
-        }
-        ListElement {
-            title : "Weather 3"
-            page  : "test/weather3.qml"
-        }
-        ListElement {
-            title : "font list"
-            page  : "test/listfont.qml"
-        }
-
-        ListElement {
-            title : "path_tester - js"
-            page  : "test/path_tester.qml"
-        }
-
-        ListElement {
-            title : "path_tester - cpp"
-            page  : "test/cpp_path.qml"
-        }
-        
+        id : page_model
     }
-    
-    
+
+
     StackView {
         id : stack_view
         anchors.fill:  parent
@@ -124,13 +101,13 @@ ApplicationWindow  {
                 model : page_model
                 anchors.fill : parent
                 delegate:  EButton {
-                    text : title
-                    width : parent.width
-                    height : 70
-                    color: "#424246"
+                    text       : title
+                    width      : parent.width
+                    height     : 70
+                    color      : "#424246"
                     text_color : "#E4432C"
-                    source : ""
-                    onClicked:  {
+                    source     : ""
+                    onClicked  : {
                         stack_view.push(Qt.resolvedUrl( page ));
                     }
                 }
@@ -150,5 +127,34 @@ ApplicationWindow  {
         }
     } // stack_view
 
+    EButton {
+        id : _bt_exit
+        width : 50
+        height : width
+        anchors.left:  parent.left
+        text_color : "white"
+        text : "exit"
+        anchors.bottom:  parent.bottom
+        color : "red"
+        onClicked:  {
+             var obj =    creatObj(root, "widget/EMsg.qml", {"x" :0, "y" : 0});
+            obj.show("zzz");
+            obj.accepted.connect(function(){
+                Qt.quit();
+                });
+        }
+    }
+
+    function creatObj(parent, file, properties){
+        var  component = Qt.createComponent( ( file ) );
+        if (component.status === Component.Ready){
+            var obj =  component.createObject(parent,  properties );
+            if (obj === null) {
+                console.log("Error creating object");
+                return;
+            }
+            return obj;
+        } // createComponent
+    }
 }
 

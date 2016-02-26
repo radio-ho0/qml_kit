@@ -4,7 +4,7 @@ Rectangle {
     id                    : root
     property alias text   : label.text 
     property alias text_color : label.color
-    property alias font   : label.font.family
+    property alias font   : label.font
     property alias source : img.source
     property string source_press 
     property string source_relea

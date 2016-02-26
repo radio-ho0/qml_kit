@@ -56,5 +56,10 @@
         <file>pics/weather/weather-storm-day.png</file>
         <file>pics/weather/weather-storm-night.png</file>
         <file>pics/weather/weather-storm.png</file>
+        <file>test/test_gallery.qml</file>
+        <file>widget/ECircle.qml</file>
+        <file>widget/EGallery.qml</file>
+        <file>widget/EMsg.qml</file>
+        <file>widget/EcurrTime.qml</file>
     </qresource>
 </RCC>

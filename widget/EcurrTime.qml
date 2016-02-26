@@ -7,16 +7,16 @@ Column {
     property alias color_time : time_core.color
     property alias color_tip  : time_tip.color
     property alias timeout    : update_timer.interval
-    spacing: 3
+    spacing : 3
 
     Text {
-        id : time_core
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.family: "Arial"
-        font.pixelSize: 16
-        renderType: Text.NativeRendering
-        color: "orangered"
-        text: "00:00:00"
+        id                       : time_core
+        anchors.horizontalCenter : parent.horizontalCenter
+        font.family              : "Arial"
+        font.pixelSize           : 16
+        renderType               : Text.NativeRendering
+        color                    : "orangered"
+        text                     : "00:00:00"
 
         Timer {
             id               : update_timer

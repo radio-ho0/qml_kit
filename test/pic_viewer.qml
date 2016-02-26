@@ -33,15 +33,6 @@ Rectangle {
 		anchors.centerIn : parent
 	}
 
-	function creatObj( file ){
-		var  component = Qt.createComponent( ( file ) );
-		if (component.status === Component.Ready){
-			var obj =  component.createObject(root, {"x": 0, "y": 0, });
-			if (obj === null) {
-				console.log("Error creating object");
-			}
-		} // createComponent
-	}
 }
 
 
