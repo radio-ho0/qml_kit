@@ -61,5 +61,6 @@
         <file>widget/EGallery.qml</file>
         <file>widget/EMsg.qml</file>
         <file>widget/EcurrTime.qml</file>
+        <file>pics/close.png</file>
     </qresource>
 </RCC>

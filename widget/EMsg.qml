@@ -65,11 +65,9 @@ Rectangle {
 
             EButton {
                 id     : bt_close
-                width  : 73
+                width  : 50
                 height : width
-                source : ""
-                text_color:  "white"
-                text : "X"
+                source : "../pics/close.png"
                 font.pointSize:  16
                 onClicked: {
                     hide();
@@ -101,6 +99,7 @@ Rectangle {
                 width  : 200
                 height : 60
                 text   : qsTr("Accept")
+                text_color : "white"
                 color  : "#77a737"
                 source : ""
                 radius : 8
@@ -121,6 +120,7 @@ Rectangle {
                 height : 60
                 text   : qsTr("Cancel")
                 color  : "#ee554d"
+                text_color : "white"
                 radius : 8
                 source : ""
                 anchors {
