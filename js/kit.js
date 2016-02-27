@@ -6,6 +6,7 @@
  */
 
 .pragma library
+.import QtQuick 2.0 as QtQuick
 
 var zh_weather_url = "http://api.openweathermap.org/data/2.5/forecast?q=Zhuhai,cn&mode=json&appid=5819a34c58f8f07bc282820ca08948f1";
 
@@ -50,3 +51,34 @@ var font_default      = "WenQuanYi Zen Hei"
         }
         return str.join("");
     }
+    
+// from: https://github.com/papyros/qml-material/blob/develop/modules/Material/Extras/js/utils.js
+
+
+function newObject(path, args, parent) {
+    if (!args)
+        args = {};
+
+    args.parent = parent;
+
+    var component = Qt.createComponent(path);
+    if (component.status === QtQuick.Component.Error) {
+        // Error Handling
+        print("Unable to load object: " + path + "\n" + component.errorString());
+        return null;
+    }
+
+    return component.createObject(parent, args);
+}
+
+function nth(d) {
+    if(d>3 && d<21)
+        return 'th'; // thanks kennebec
+
+    switch (d % 10) {
+        case 1:  return "st";
+        case 2:  return "nd";
+        case 3:  return "rd";
+        default: return "th";
+    }
+}
