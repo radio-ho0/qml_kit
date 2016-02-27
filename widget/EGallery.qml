@@ -14,6 +14,7 @@ Rectangle {
     property var   img_width    : 522
     property var   img_height   : 322
     property var   nav_margin   : 20
+    property var   move_duration : 250
 
     property var setArray : function( pic_array ){
         arr_model.clear();
@@ -82,6 +83,7 @@ Rectangle {
                 snapMode                : ListView.SnapOneItem
                 flickDeceleration       : 2000
                 cacheBuffer             : 200
+                highlightMoveDuration   : root.move_duration
 
                 onCurrentIndexChanged: {
                     if(view.currentIndex === view.count - 1){

@@ -17,16 +17,15 @@ ApplicationWindow  {
         page_model.append({ title : "test Elabel",       page : "test/test_elabel.qml"});
         page_model.append({ title : "test EButton",      page : "test/test_ebutton.qml"});
         page_model.append({ title : "珠海天气",          page : "test/zh_weather.qml"});
-        page_model.append({ title : "Pic Viewer",        page : "test/pic_viewer.qml"});
-        page_model.append({ title : "JSON Path",         page : "test/json_path.qml"});
         page_model.append({ title : "weather 3",         page : "test/weather3.qml"});
+        page_model.append({ title : "Pic Viewer",        page : "test/pic_viewer.qml"});
+        page_model.append({ title : "EGallery",          page : "test/test_gallery.qml"});
+        page_model.append({ title : "JSON Path",         page : "test/json_path.qml"});
         page_model.append({ title : "font list",         page : "test/listfont.qml"});
         page_model.append({ title : "path_tester - js",  page : "test/path_tester.qml"});
         page_model.append({ title : "path tester - cpp", page : "test/cpp_path.qml"});
-        page_model.append({ title : "EGallery",          page : "test/test_gallery.qml"});
 
     }
-
 
     
     toolBar:
@@ -69,7 +68,7 @@ ApplicationWindow  {
                 }
             }
         }
-        EcurrTime {
+        ECurrTime {
             id         : curr_time
             timeout    : 5000
             color_time : "white"
@@ -137,11 +136,15 @@ ApplicationWindow  {
         anchors.bottom:  parent.bottom
         color : "red"
         onClicked:  {
-             var obj =    creatObj(root, "widget/EMsg.qml", {"x" :0, "y" : 0});
-            obj.show("zzz");
+//             var obj =    creatObj(root, "widget/EMsg.qml", {"x" :0, "y" : 0});
+//            obj.show("zzz");
+//            obj.accepted.connect(function(){
+//                Qt.quit();
+//                });
+            var obj =   Kit.newObject("../widget/EMsg.qml", {"info": "zzz"}, root);
             obj.accepted.connect(function(){
                 Qt.quit();
-                });
+            });
         }
     }
 
@@ -151,7 +154,7 @@ ApplicationWindow  {
             var obj =  component.createObject(parent,  properties );
             if (obj === null) {
                 console.log("Error creating object");
-                return;
+                return null;
             }
             return obj;
         } // createComponent

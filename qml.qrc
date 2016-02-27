@@ -1,12 +1,18 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>widget/ECircle.qml</file>
+        <file>widget/EGallery.qml</file>
+        <file>widget/EMsg.qml</file>
+        <file>widget/ECurrTime.qml</file>
         <file>widget/EButton.qml</file>
         <file>widget/ELabel.qml</file>
         <file>widget/EpicSlider.qml</file>
         <file>widget/JSONListModel.qml</file>
         <file>widget/ScrollBar.qml</file>
         <file>widget/Weather_delegate.qml</file>
+        <file>widget/EScrollText.qml</file>
+
         <file>test/json_path.qml</file>
         <file>test/listfont.qml</file>
         <file>test/pic_viewer.qml</file>
@@ -14,17 +20,19 @@
         <file>test/test_elabel.qml</file>
         <file>test/weather3.qml</file>
         <file>test/zh_weather.qml</file>
+        <file>test/test_gallery.qml</file>
+        <file>test/path_tester.qml</file>
+        <file>test/cpp_path.qml</file>
+
+        <file>js/kit.js</file>
+        <file>js/jsonpath.js</file>
+
         <file>pics/1.png</file>
         <file>pics/2.png</file>
         <file>pics/3.png</file>
         <file>pics/bt1.png</file>
         <file>pics/bt2.png</file>
         <file>pics/scrollbar.png</file>
-        <file>js/kit.js</file>
-        <file>js/jsonpath.js</file>
-        <file>test/path_tester.qml</file>
-        <file>widget/EScrollText.qml</file>
-        <file>test/cpp_path.qml</file>
         <file>pics/weather/04d.png</file>
         <file>pics/weather/04n.png</file>
         <file>pics/weather/10d.png</file>
@@ -56,11 +64,6 @@
         <file>pics/weather/weather-storm-day.png</file>
         <file>pics/weather/weather-storm-night.png</file>
         <file>pics/weather/weather-storm.png</file>
-        <file>test/test_gallery.qml</file>
-        <file>widget/ECircle.qml</file>
-        <file>widget/EGallery.qml</file>
-        <file>widget/EMsg.qml</file>
-        <file>widget/EcurrTime.qml</file>
         <file>pics/close.png</file>
     </qresource>
 </RCC>

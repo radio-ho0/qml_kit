@@ -6,8 +6,6 @@ Rectangle {
     height : parent.height
     color  : "transparent"
 
-    anchors.centerIn:  parent
-
     property alias info : txt.text
     property var   show : function(text){
         info = text;

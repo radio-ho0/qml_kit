@@ -1,10 +1,14 @@
 # qml_kit  :stars:
 
-    There are my QML kit. glhf :relaxed:
+    There are my QML kit. glhf 
     
 ## Component
   - EButton - A button
+  - ECircle - circle with color animation
+  - ECurrTime - display current Time
+  - EGallery - image gallery type 2
   - ELabel - simple text
+  - EMsg   - msg box
   - EScrollText - a text area with scrollbar
   - EpicSlider - A  pic viewer
   - EJSONListModel - json list model
