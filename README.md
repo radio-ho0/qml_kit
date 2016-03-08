@@ -6,12 +6,14 @@
   - EButton - A button
   - ECircle - circle with color animation
   - ECurrTime - display current Time
+  - ECircleNum - number with circle
   - EGallery - image gallery type 2
   - ELabel - simple text
   - EMsg   - msg box
+  - EProgressBarStyle - custom ProgressBar style
   - EScrollText - a text area with scrollbar
   - EpicSlider - A  pic viewer
-  - EJSONListModel - json list model
+  - JSONListModel - json list model
   - SCrollBar - scroll bar
   - Weatherdelegate - a simple  weather delegate widget :blush:
 

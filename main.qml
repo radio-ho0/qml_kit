@@ -14,16 +14,17 @@ ApplicationWindow  {
     Component.onCompleted : {
         page_model.clear();
  
-        page_model.append({ title : "test Elabel",       page : "test/test_elabel.qml"});
-        page_model.append({ title : "test EButton",      page : "test/test_ebutton.qml"});
-        page_model.append({ title : "珠海天气",          page : "test/zh_weather.qml"});
-        page_model.append({ title : "weather 3",         page : "test/weather3.qml"});
-        page_model.append({ title : "Pic Viewer",        page : "test/pic_viewer.qml"});
-        page_model.append({ title : "EGallery",          page : "test/test_gallery.qml"});
-        page_model.append({ title : "JSON Path",         page : "test/json_path.qml"});
-        page_model.append({ title : "font list",         page : "test/listfont.qml"});
-        page_model.append({ title : "path_tester - js",  page : "test/path_tester.qml"});
-        page_model.append({ title : "path tester - cpp", page : "test/cpp_path.qml"});
+        page_model.append({ title : "test Elabel",        page : "test/test_elabel.qml"});
+        page_model.append({ title : "test EButton",       page : "test/test_ebutton.qml"});
+        page_model.append({ title : "珠海天气",           page : "test/zh_weather.qml"});
+        page_model.append({ title : "weather 3",          page : "test/weather3.qml"});
+        page_model.append({ title : "Pic Viewer",         page : "test/pic_viewer.qml"});
+        page_model.append({ title : "EGallery",           page : "test/test_gallery.qml"});
+        page_model.append({ title : "JSON Path",          page : "test/json_path.qml"});
+        page_model.append({ title : "font list",          page : "test/listfont.qml"});
+        page_model.append({ title : "path_tester - js",   page : "test/path_tester.qml"});
+        page_model.append({ title : "path tester - cpp",  page : "test/cpp_path.qml"});
+        page_model.append({ title : "circle num and bar", page : "test/test_num_bar.qml"});
 
     }
 
@@ -142,6 +143,7 @@ ApplicationWindow  {
 //                Qt.quit();
 //                });
             var obj =   Kit.newObject("../widget/EMsg.qml", {"info": "zzz"}, root);
+            obj.show("zzz");
             obj.accepted.connect(function(){
                 Qt.quit();
             });
