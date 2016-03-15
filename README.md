@@ -16,6 +16,9 @@
   - JSONListModel - json list model
   - SCrollBar - scroll bar
   - Weatherdelegate - a simple  weather delegate widget :blush:
+  - RoundImage - round Image display
+  - EProgressBarStyle2 - custom progressbar style type 2
+  - EProgressBarStyle3 - custom progressbar style type 3 rainbow
 
   ![screenshot](https://raw.githubusercontent.com/radio-ho0/qml_kit/master/preview.png)
   

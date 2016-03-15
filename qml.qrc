@@ -12,7 +12,11 @@
         <file>widget/ScrollBar.qml</file>
         <file>widget/Weather_delegate.qml</file>
         <file>widget/EScrollText.qml</file>
-
+        <file>widget/ECircleNum.qml</file>
+        <file>widget/EProgressBarStyle.qml</file>
+        <file>widget/EProgressBarStyle2.qml</file>
+        <file>widget/RoundImage.qml</file>
+        <file>widget/RoundImage2.qml</file>
         <file>test/json_path.qml</file>
         <file>test/listfont.qml</file>
         <file>test/pic_viewer.qml</file>
@@ -23,10 +27,9 @@
         <file>test/test_gallery.qml</file>
         <file>test/path_tester.qml</file>
         <file>test/cpp_path.qml</file>
-
+        <file>test/test_num_bar.qml</file>
         <file>js/kit.js</file>
         <file>js/jsonpath.js</file>
-
         <file>pics/1.png</file>
         <file>pics/2.png</file>
         <file>pics/3.png</file>
@@ -65,5 +68,10 @@
         <file>pics/weather/weather-storm-night.png</file>
         <file>pics/weather/weather-storm.png</file>
         <file>pics/close.png</file>
+        <file>widget/EProgressBarStyle3.qml</file>
+        <file>pics/burn.png</file>
+        <file>pics/rainbow.png</file>
+        <file>pics/star.png</file>
+        <file>pics/bar_bg.png</file>
     </qresource>
 </RCC>

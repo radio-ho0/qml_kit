@@ -18,6 +18,7 @@ Rectangle {
 
         x : 50
         y : 60
+        spacing:  30
 
         ProgressBar {
             value : 0.5
@@ -29,7 +30,22 @@ Rectangle {
         ProgressBar {
             indeterminate: true
         }
+
+        Slider {
+            id: _slider
+
+            width: 252
+            height: 27
+        }
+
+        ProgressBar {
+            value : _slider.value
+            style : EProgressBarStyle3{
+            }
+        }
     }
+
+
     
 
 }
