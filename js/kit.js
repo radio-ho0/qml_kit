@@ -82,3 +82,96 @@ function nth(d) {
         default: return "th";
     }
 }
+
+
+function escapeHTML(html) {
+    return html.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+}
+
+
+// 转换小数 a.toFix( n )
+function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+
+
+function add_zero (str, max) {
+    return str.length < max ? add_zero("0" + str, max) : str;
+}
+
+
+
+function gettime(){
+
+    var today = new Date();
+    var h  = today.getHours();
+    var m = today.getMinutes();
+    var s   =today.getSeconds();
+
+    var mytime = h  + ":" + m + ":" + s;
+    return mytime;
+}
+
+
+//调用方法也很简单：
+//GetDateDiff("2010-10-11 00:00:00", "2010-10-11 00:01:40", "day")
+//这个是计算天数
+//GetDateDiff("2010-10-11 00:00:00", "2010-10-11 00:01:40", "seond")是计算秒数     
+
+function getDateDiff(startTime, endTime, diffType) {
+    //将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式
+    startTime = startTime.replace(/\-/g, "/");
+    endTime = endTime.replace(/\-/g, "/");
+    //将计算间隔类性字符转换为小写
+    diffType = diffType.toLowerCase();
+    var sTime = new Date(startTime); //开始时间
+    var eTime = new Date(endTime); //结束时间
+    //作为除数的数字
+    var divNum = 1;
+    switch (diffType) {
+        case "second":
+            divNum = 1000;
+            break;
+        case "minute":
+            divNum = 1000 * 60;
+            break;
+        case "hour":
+            divNum = 1000 * 3600;
+            break;
+        case "day":
+            divNum = 1000 * 3600 * 24;
+            break;
+        default:
+            break;
+    }
+    //return parseInt((eTime.getTime() - sTime.getTime()) / parseInt(divNum));
+    return (eTime.getTime() - sTime.getTime()) / divNum;
+}
+
+function prettyFloat(x,nbDec) {
+    if (!nbDec) nbDec = 100;
+    var a = Math.abs(x);
+    var e = Math.floor(a);
+    var d = Math.round((a-e)*nbDec); if (d == nbDec) { d=0; e++; }
+    var signStr = (x<0) ? "-" : " ";
+    var decStr = d.toString(); var tmp = 10; while(tmp<nbDec && d*tmp < nbDec) {decStr = "0"+decStr; tmp*=10;}
+    var eStr = e.toString();
+    return signStr+eStr+"."+decStr;
+}
+
+
+function getIndex(n ){
+    if(n == 1){
+        for(var i = 0; i < n * NP; ++i){
+            console.log(nums[i]);
+        }
+    }else{
+        for(var i = (n -1) * NP; i < n* NP; ++i){
+            console.log(nums[i]);
+        }
+
+    }
+}

@@ -21,24 +21,24 @@ Rectangle {
         source                 : "../pics/weather/weather-clear.png"
     }
     Text {
-        id                     : info_date
-        text                   : "2015-01-10 15:00:00"
-        color               : Kit.color_date
-        font.pointSize         : 15
-        anchors.verticalCenter : parent.verticalCenter
+        id             : info_date
+        text           : "2015-01-10 15 : 00 : 00"
+        color          : Kit.color_date
+        font.pointSize : 15
         anchors{
             left               : weather_icon.right
             leftMargin         : 10
+            verticalCenter : parent.verticalCenter
         }
     }
     Text {
         id                     : info_description
         text                   : "Sunny"
         font.pointSize         : 22
-        anchors.verticalCenter : parent.verticalCenter
         anchors{
-            left               : info_date.right
-            leftMargin         : 10
+            left           : info_date.right
+            leftMargin     : 10
+            verticalCenter : parent.verticalCenter
         }
         width : Math.max(contentWidth, 200)
     }
@@ -47,20 +47,20 @@ Rectangle {
         text                   : "23"
         font.pointSize         : 22
         color :     Kit.color_temperature
-        anchors.verticalCenter : parent.verticalCenter
         anchors{
-            left               : info_description.right
-            leftMargin         : 10
+            left           : info_description.right
+            leftMargin     : 10
+            verticalCenter : parent.verticalCenter
         }
     }
     Text {
         id                     : info_humidity
         text                   : "60"
         font.pointSize         : 22
-        anchors.verticalCenter : parent.verticalCenter
         anchors{
-            left               : info_temperature.right
-            leftMargin         : 10
+            left           : info_temperature.right
+            leftMargin     : 10
+            verticalCenter : parent.verticalCenter
         }
     }
 

@@ -95,11 +95,11 @@ ApplicationWindow  {
         focus:  true
         
         initialItem:  Item {
-            width : parent.width
+            width  : parent.width
             height : parent.height
             ListView {
-                id :  menu_list
-                model : page_model
+                id           : menu_list
+                model        : page_model
                 anchors.fill : parent
                 delegate:  EButton {
                     text       : title
@@ -115,9 +115,9 @@ ApplicationWindow  {
             }// menu_list
 
             ScrollBar {
-                id : stack_bar
-                width : 8
-                scrollArea: menu_list
+                id         : stack_bar
+                width      : 8
+                scrollArea : menu_list
 
                 anchors {
                     right  : menu_list.right
@@ -129,14 +129,14 @@ ApplicationWindow  {
     } // stack_view
 
     EButton {
-        id : _bt_exit
-        width : 50
-        height : width
-        anchors.left:  parent.left
-        text_color : "white"
-        text : "exit"
-        anchors.bottom:  parent.bottom
-        color : "red"
+        id             : _bt_exit
+        width          : 50
+        height         : width
+        anchors.left   : parent.left
+        text_color     : "white"
+        text           : "exit"
+        anchors.bottom : parent.bottom
+        color          : "red"
         onClicked:  {
 //             var obj =    creatObj(root, "widget/EMsg.qml", {"x" :0, "y" : 0});
 //            obj.show("zzz");

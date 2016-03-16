@@ -1,6 +1,6 @@
 # qml_kit  :stars:
 
-    There are my QML kit. glhf 
+    There are my QML kit. glhf
     
 ## Component
   - EButton - A button
@@ -24,3 +24,4 @@
   
 ## NOTE
   - widget/JSONListModel.qml and js/jsonpath.js from (https://github.com/kromain/qml-utils)
+

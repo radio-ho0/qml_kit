@@ -113,14 +113,14 @@ Rectangle {
                 }
             }
             EButton {
-                id     : bt_cancel
-                width  : 200
-                height : 60
-                text   : qsTr("Cancel")
-                color  : "#ee554d"
+                id         : bt_cancel
+                width      : 200
+                height     : 60
+                text       : qsTr("Cancel")
+                color      : "#ee554d"
                 text_color : "white"
-                radius : 8
-                source : ""
+                radius     : 8
+                source     : ""
                 anchors {
                     top         : parent.top
                     topMargin   : 220

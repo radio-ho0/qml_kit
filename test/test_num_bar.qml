@@ -21,8 +21,8 @@ Rectangle {
         spacing:  30
 
         ProgressBar {
-            value : 0.5
-            style : EProgressBarStyle{
+            value          : 0.5
+            style          : EProgressBarStyle{
                 bg_color   : "black"
                 fill_color : "tomato"
             }
@@ -32,10 +32,10 @@ Rectangle {
         }
 
         Slider {
-            id: _slider
+            id     : _slider
 
-            width: 252
-            height: 27
+            width  : 252
+            height : 27
         }
 
         ProgressBar {
@@ -44,9 +44,6 @@ Rectangle {
             }
         }
     }
-
-
-    
 
 }
 

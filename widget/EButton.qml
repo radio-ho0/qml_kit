@@ -3,9 +3,9 @@ import QtQuick 2.0
 Rectangle {
     id                    : root
     property alias text   : label.text 
-    property alias text_color : label.color
     property alias font   : label.font
     property alias source : img.source
+    property alias text_color : label.color
     property string source_press 
     property string source_relea
 
@@ -19,11 +19,11 @@ Rectangle {
     Image{
         id           : img
         anchors.fill : parent
-        source : ""
+        source       : ""
     }
     state:  "state_normal"
     MouseArea {
-        id : m_mouseArea
+        id           : m_mouseArea
         anchors.fill : parent
         onClicked    : {
             root.clicked()

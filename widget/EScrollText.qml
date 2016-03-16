@@ -1,18 +1,18 @@
 import QtQuick 2.0
 
 Rectangle {
-    id    : root
-    color : "transparent"
-    width : 360
+    id     : root
+    color  : "transparent"
+    width  : 360
     height : 240
 
     property alias text: helpText.text
 
     Rectangle {
-        id    : helpScreen
-        width : root.width
+        id     : helpScreen
+        width  : root.width
         height : root.height
-        color : "transparent"
+        color  : "transparent"
 
         Flickable {
             id                 : flick1
