@@ -73,5 +73,8 @@
         <file>pics/rainbow.png</file>
         <file>pics/star.png</file>
         <file>pics/bar_bg.png</file>
+        <file>widget/EVideoBar.qml</file>
+        <file>test/img_data.qml</file>
+        <file>test/test_pathline.qml</file>
     </qresource>
 </RCC>

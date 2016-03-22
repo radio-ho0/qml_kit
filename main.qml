@@ -26,6 +26,7 @@ ApplicationWindow  {
         page_model.append({ title : "path tester - cpp",  page : "test/cpp_path.qml"});
         page_model.append({ title : "circle num and bar", page : "test/test_num_bar.qml"});
         page_model.append({ title : "pathline",           page : "test/test_pathline.qml"});
+        page_model.append({ title : "data:img",           page : "test/img_data.qml"    });
 
     }
 
