@@ -8,6 +8,8 @@ Rectangle {
 
     property var img_prefix : "data:img/png;base64, "
 
+    // base64 ha.png -w 0 
+
     Image {
         id     : _bg
         width  : 296

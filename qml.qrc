@@ -28,6 +28,7 @@
         <file>test/path_tester.qml</file>
         <file>test/cpp_path.qml</file>
         <file>test/test_num_bar.qml</file>
+        <file>test/test_unicode.qml</file>
         <file>js/kit.js</file>
         <file>js/jsonpath.js</file>
         <file>pics/1.png</file>
