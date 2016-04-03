@@ -21,38 +21,19 @@ Rectangle {
 
         delegate :  ECircleNum{
             num     : index < 10 ? "0" + index : "" + index
-            z       : PathView.zOrder;
-            opacity : PathView.itemAlpha;
-            scale   : PathView.itemScale;
         }
         path: Path {
             id     : path1
-            startX : 50
-            startY : 34
+            startX : 45
+            startY : 49
 
-            PathAttribute { name: "zOrder"    ; value: 0 }
-            PathAttribute { name: "itemAlpha" ; value: 0.1 }
-            PathAttribute { name: "itemScale" ; value: 0.5}
 
             PathLine {
                 id : pl1
-                x  : 50
-                y  : 94
+                x  : 45
+                y  : 274
             }
 
-            PathAttribute { name: "zOrder"    ; value: 1}
-            PathAttribute { name: "itemAlpha" ; value: 1 }
-            PathAttribute { name: "itemScale" ; value: 1}
-
-            PathLine {
-                id : pl2
-                x  : 48
-                y  : 216
-            }
-
-            PathAttribute { name: "zOrder"    ; value: 0 }
-            PathAttribute { name: "itemAlpha" ; value: 0.1 }
-            PathAttribute { name: "itemScale" ; value: 0.5 }
         }
 
     }
@@ -161,53 +142,6 @@ Rectangle {
             }
         }
 
-        EButton {
-            id     : bt_pl2_x_plus
-            width : 120
-            height : 30
-            text   : "pl2 x +"
-            color  : "royalblue"
-
-            onClicked :{
-                pl2.x += spin_step.value;
-            }
-        }
-
-        EButton {
-            id     : bt_pl2_x_min
-            width : 120
-            height : 30
-            text   : "pl2 x -"
-            color  : "royalblue"
-            onClicked :{
-                pl2.x -= spin_step.value;
-            }
-        }
-
-
-        EButton {
-            id     : bt_pl2_y_plus
-            width : 120
-            height : 30
-            text   : "pl2 y +"
-            color  : "firebrick"
-
-            onClicked :{
-                pl2.y += spin_step.value;
-            }
-        }
-
-        EButton {
-            id     : bt_pl2_y_min
-            width : 120
-            height : 30
-            text   : "pl2 y -"
-            color  : "firebrick"
-
-            onClicked :{
-                pl2.y -= spin_step.value;
-            }
-        }
 
     } // col
 
@@ -230,7 +164,7 @@ Rectangle {
 
     function updateAttr(){
         print("startX: " + path1.startX + " startY : " + path1.startY + " pl1.x: " 
-        + pl1.x + " pl1.y : " + pl1.y + " pl2.x : " + pl2.x + " pl2.y : "+ pl2.y );
+        + pl1.x + " pl1.y : " + pl1.y  );
     }
 
     EButton {

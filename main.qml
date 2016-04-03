@@ -28,6 +28,7 @@ ApplicationWindow  {
         page_model.append({ title : "pathline",           page : "test/test_pathline.qml"});
         page_model.append({ title : "data:img",           page : "test/img_data.qml"    });
         page_model.append({ title : "unicode test",       page : "test/test_unicode.qml"   });
+        page_model.append({ title : "select Hours",       page : "test/test_select_time.qml"   });
 
     }
 

@@ -77,5 +77,8 @@
         <file>widget/EVideoBar.qml</file>
         <file>test/img_data.qml</file>
         <file>test/test_pathline.qml</file>
+        <file>widget/Delegate_hour.qml</file>
+        <file>widget/HourSelect.qml</file>
+        <file>test/test_select_time.qml</file>
     </qresource>
 </RCC>
